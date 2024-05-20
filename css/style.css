@@ -1,0 +1,697 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+.fa-solid {
+    color: var(--main-color);
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/***** Header *****/
+
+header{
+    width: 100%;
+    height: 79px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    height: 19px;
+}
+header nav{
+    width: 244px;
+    height: 35px;
+    align-self: flex-start;
+}
+header ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+header li{
+    display: flex;
+    align-items: flex-end;
+    border-top: solid 2px transparent;
+}
+header li:hover{
+    border-top: solid 2px var(--main-color);
+}
+header a{
+    font-weight: 400;
+}
+header a:hover{
+    color: var(--main-color);
+}
+
+/************* boite infos et recherche **********/
+
+.chapeau{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+.chapeau h1{
+    font-weight: 700;
+    font-size: 22px;
+}
+.chapeau p{
+    font-weight: 400;
+    font-size: 16px;
+}
+.infos-groupe{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+/**** barre de recherche ****/
+
+form{
+    width: 377px;
+    display: flex;
+}
+form label{
+    width: 50px;
+    height: 49px;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form label .fa-solid{
+    font-size: 18px;
+    color: black;
+}
+form input[type="text"]{
+    width: 195px;
+    border: 1px solid var(--main-bg-color);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+form input[type="submit"]{
+    width: 132px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 0 15px 15px 0;
+}
+form button{
+    display: none;
+}
+
+/**** BARRE DE FILTRES ****/
+
+.barre-de-filtres{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.barre-de-filtres p{
+    font-weight: 700;
+    font-size: 18px;
+}
+.bloc-boutons{
+    height: 100%;
+    display: flex;
+    gap: 15px;
+}
+.filtre{
+    height:100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background-color: transparent;
+    padding: 4px 19px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.filtre:hover{
+    background-color: var(--filter-bg-color);
+}
+.filtre:nth-of-type(1)>.fa-solid{
+    font-size: 16px;
+}
+.filtre:nth-of-type(2)>.fa-solid{
+    font-size: 22px;
+}
+.filtre:nth-of-type(3)>.fa-solid{
+    font-size: 18px;
+}
+.filtre:nth-of-type(4)>.fa-solid{
+    font-size: 20px;
+}
+.filtre p{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/***** Barre infos *****/
+
+.barre-infos{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.barre-infos .fa-info{
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    font-size: 10px;
+}
+.barre-infos p{
+    font-weight: 400;
+    font-size: 16px;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+/***** Cartes gabarit *****/
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.card a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.card img {
+    object-fit: cover;
+}
+.card-title {
+    font-size: 16px;
+}
+.card-subtitle{
+    font-size: 14px;
+}
+.euro {
+    font-weight: 700;
+}
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+
+.hebergements {
+    width: 65%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+}
+.conteneur-cartes-hebergement{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+}
+.hebergements .card{
+    padding: 5px 5px 15px 5px;
+    flex-basis: 29%;
+    flex-grow: 1;  
+}
+.hebergements .card a{
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+.hebergements .card img{
+    height: 124px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.hebergements .card-content{
+    padding: 0 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+.hebergements .card-title{
+    margin-bottom: 8px;
+}
+.hebergements button{
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    display: inline;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+/****** Populaires ***********/
+
+.populaires {
+    width: 32%;
+}
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.populaires-cards .card {    
+    margin-top: 30px;
+}
+.populaires-cards .card a{
+    flex-flow: row nowrap;
+}
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/***** activites *****/
+
+.activites{
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+.conteneur-cartes-activite{
+    display: flex;
+    gap: 30px;
+}
+.activites .card{
+    width:25%;
+    padding: 0;
+}
+.activites .card a{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.activites .card img{
+    height: 380px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.activites .conteneur-titre{
+    height: 59px;
+    display: flex;
+    align-items: center;
+}
+.activites .card-title{
+    padding: 20px 19px;
+}
+
+/***** footer *****/
+
+footer nav{
+    width: 100%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: flex-start;
+}
+.colonne{
+    padding: 20px;
+    width: 33%;
+    flex-basis: 33%;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+.colonne h3{
+    font-weight: 700;
+    font-size: 18px;
+}
+.colonne ul{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    list-style-type: none;
+}
+.colonne li a{
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1024px) {
+
+    form input[type="text"]{
+        flex-basis: 147px;
+        flex-grow: 1;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .barre-de-filtres{
+        height: 91px;
+        width: 668px;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .bloc-boutons{
+        height: 50px;
+    }
+    .filtre{
+        font-size: 16px;
+    }
+
+    /****** Hebergements And Populaires TABLETTE ******/
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+    .hebergements {
+        width: 100%;
+    }
+    .hebergements .card{
+        flex-basis: 28%;
+    }
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .populaires-cards .card {
+        flex-basis: 28%;
+        flex-grow: 1;
+    }
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    /**** Activites TABLETTE ****/
+
+    .conteneur-cartes-activite{
+        gap: 25px;
+    }
+    .activites .card img{
+        height: 180px;
+    }
+    .activites .card-title{
+        padding: 15px 10px;
+    }
+    .activites .conteneur-titre{
+        height: 70px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    .main-container {
+        max-width: 768px;
+        padding: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    main{
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+
+    }
+    /**** Header SMARTPHONE****/
+
+    header{
+        width: 100%;
+        height: 115px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    header img{
+        height: 19px;
+        padding: 30px;
+    }
+    header nav{
+        width: 100%;
+        height: 36px;
+    }
+    header li{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+        border-bottom: solid 2px var(--main-bg-color);
+    }
+    header li:hover{
+        border-top: solid 0 transparent;
+        border-bottom: solid 2px var(--main-color);
+    }
+
+    /************* Boite infos recherche SMARTPHONE **********/
+
+    .infos-groupe{
+        box-sizing: border-box;
+        padding: 0 20px;
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    /**** barre de recherche SMARTPHONE ****/
+
+    form{
+        width: 100%;
+        height: 49px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--main-bg-color);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    form label{
+        height: 49px;
+        box-sizing: border-box;
+    }
+    form input[type="text"]{
+        padding-left: 20px;
+        border: none;
+        text-align: left;
+    }
+    form input[type="submit"]{
+        display: none;
+    }
+    form button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 49px;
+        min-width: 49px;
+        height: 49px;
+        border: 1px solid var(--main-color);
+        box-sizing: border-box;
+        border-radius: 15px;
+        color: white;
+        background-color: var(--main-color);
+        filter: drop-shadow(0px 4px 4px  rgba(0, 0, 0, 0.25));
+    }
+    .fa-magnifying-glass{
+        color: white;
+        font-size: 17px;
+    }
+
+    /***** Barre de filres SMARTPHONE *****/
+
+    .barre-de-filtres{
+        height: 161px;
+        width: 100%;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .bloc-boutons{
+        height: 130px;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        gap: 10px;
+    }
+    .filtre{
+        height: 50px;
+        width: calc(50% - 5px);
+        font-size: 14px;
+    }
+
+    /* Barre infos SMARTPHONE*/
+
+    .barre-infos{
+        height: 38px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .barre-infos .fa-info{
+        min-width: 24px;
+    }
+
+    /***** cartes SMARTPHONE *****/
+
+    .card{
+        filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.1))
+    }
+
+    /***** Populaires SMARTPHONE *****/
+
+    .hebergements-and-populaires{
+        gap: 15px;
+    }
+    .hebergements-and-populaires section{
+        padding: 20px;
+    }
+    section.populaires{
+        order: -1;
+        padding: 30px 20px;
+    }
+    .populaires-cards, .conteneur-cartes-activite{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .populaires-title{
+        margin-bottom: 15px;
+    }
+    .populaires-cards .card{
+        margin-top: 0;
+    }
+    section.hebergements{
+        background-color: white;
+        gap: 15px;
+    }
+    .conteneur-cartes-hebergement{
+        flex-flow: column;
+        gap: 15px;
+    }
+    .conteneur-cartes-hebergement .card:nth-child(1){ /*hotel du port*/
+        order: -2;
+    }
+    .conteneur-cartes-hebergement .card:nth-child(2){ /*chez Amina*/
+        order: 1;
+    }
+    .conteneur-cartes-hebergement .card:nth-child(5){ /*la cannebiere*/
+        order: -1;
+    }
+
+    /***** activites SMARTPHONE *****/
+
+    .activites .card{
+        width: 100%;
+    }
+    .activites .conteneur-titre{
+        height: 60px;
+    }
+    .activites .card img{
+        height: 140px;
+    }
+
+    /***** Footer SMARTPHONE *****/
+    footer{
+        width: 100%;
+    }
+    footer nav{
+        flex-flow: column;
+        gap: 50px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .colonne{
+        padding: 0;
+        width: 100%;
+        flex-basis: 33%;
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 15px;
+    }
+}
